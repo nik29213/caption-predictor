@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>caption</title>
+</head>
+<body>
+	<h1>
+		caption prediction
+	</h1>
+	<form method="POST" action="/" enctype="multipart/form-data">
+		<input type="file" name="userfile">
+
+		<input type="submit">
+	</form>
+	{% if your_result %}
+		<img src = "{{ your_result['image'] }}">
+		<center><h1> {{ your_result["caption"] }}</h1></center>
+	{% endif %}
+</body>
+</html>
